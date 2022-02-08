@@ -7,7 +7,7 @@
 *	gcc -liocs -o mkbdf16.x mkbdf16.c
 *
 * Usage:
-*	mkbdf16.x > fontrom_x68k.bdf
+*	mkbdf16.x > fontrom.bdf
 */
 
 #include <stdio.h>

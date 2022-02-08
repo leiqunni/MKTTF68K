@@ -1,0 +1,20 @@
+#!/usr/bin/fontforge -script
+#
+# createttf.pe
+# This file is part of MKTTF68K.
+#
+
+Open("data/template.sfd")
+Import("compiled/X680x0.bdf")
+Import("compiled/svg/u*.svg")
+RenameGlyphs("Adobe Glyph List")
+SetFontNames("X680x0", "X680x0", "X680x0", "Regular", " ", $1)
+SelectAll()
+Simplify()
+CanonicalStart()
+CanonicalContours()
+Save("compiled/X680x0.sfd")
+Generate("compiled/X680x0.ttf", "ttf", 4)
+
+Close()
+Quit()
